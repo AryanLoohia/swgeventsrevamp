@@ -1,0 +1,211 @@
+.Details {
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+    width: 100vw;
+    font-family: Arial, sans-serif;
+  }
+  
+  .button-box-wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #ddd;
+    padding: 5px;
+  }
+  
+  .button-box {
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .main-content {
+    display: flex;
+    flex: 1;
+    height: 97vh;
+    margin-bottom: 80px;
+    width: 100%;
+    box-shadow: inset 0 0 100px rgba(2, 141, 147,0.8);
+    flex-direction: row;
+  }
+  
+  .left-pane {
+    width: 60vw;
+    padding: 20px;
+    background-color: #f0f0f0;
+    overflow-y: auto;
+    
+    border:3px solid  #028d93;
+    /* border-color: #028d93; */
+    display: flex;
+    margin:10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  .title {
+    font-size: 70px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    font-family: Impact;
+    font-weight: bolder;
+    color:#028d93;
+    margin-bottom:20px;
+  }
+  
+  .description {
+    font-size: 35px;
+    text-align: justify;
+    font-family: Gill Sans;
+  }
+  
+  .right-pane {
+    width: 40vw;
+    height:97vh;
+    padding: 20px;
+    display: grid;
+    gap: 10px; 
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1frDetails));
+    /* grid-auto-rows: 200px; */
+    align-items: center;
+    justify-content: center;
+    overflow-y:auto;
+  }
+  
+  .imgdetails {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0 5px 15px 5px #028d93;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .imgdetails:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  
+  .imgdetails:nth-child(2),
+  .imgdetails:nth-child(3) {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+  
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  button {
+    width: 20px;
+    height: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: lightgray;
+    cursor: pointer;
+  }
+  
+  button.active {
+    background-color: teal;
+  }
+  .Details .main-content {
+    display: flex;
+  }
+  
+  .Details .main-content.normal-layout .left-pane {
+    order: 1;
+  }
+  
+  .Details .main-content.normal-layout .right-pane {
+    order: 2;
+  }
+  
+  .Details .main-content.alternate-layout .left-pane {
+    order: 2;
+  }
+  
+  .Details .main-content.alternate-layout .right-pane {
+    order: 1;
+  }
+  
+  
+  /* @keyframes scroll {
+    0% {
+      transform: translateY(0);
+    }
+    100% {
+      transform: translateY(-100%);
+    }
+  }
+  
+  .scroll-container {
+    display: flex;
+    flex-direction: column;
+    animation: scroll linear infinite;
+  }
+   */
+
+  @media (max-width: 768px) {
+    .main-content {
+      flex-direction: column;
+      width:100vw;
+      overflow-x: hidden;
+      margin-bottom: 20px;
+    }
+  
+    
+  
+    .left-pane {
+      height: 50%;
+      width: 100vw;
+      margin: 0px;
+      padding: 10px;
+      box-shadow: inset 0 0 40px rgba(2, 141, 147,0.8);
+      
+    }
+  
+    .right-pane {
+      height: 50%;
+      width: 100vw;
+      padding: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      overflow-y: visible;
+      margin-bottom:20px;
+      /* margin : 10px;  */
+      /* margin-righ t:10px; */
+    }
+  
+    .title {
+      font-size: 20px;
+    }
+  
+    .description {
+      font-size: 16px;
+    }
+  
+    .imgdetails {
+      /* width:100vw; */
+      width:100vw;
+      /* height:100%; */
+      object-fit:contain;
+      overflow: hidden;
+      /* overflow-y:hidden ; */
+
+      /* height: 150px; */
+    }
+    .Details .main-content.normal-layout .left-pane,
+    .Details .main-content.normal-layout .right-pane,
+    .Details .main-content.alternate-layout .left-pane,
+    .Details .main-content.alternate-layout .right-pane {
+        order: unset;
+    }
+  }
+  

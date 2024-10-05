@@ -170,9 +170,12 @@
       box-shadow: inset 0 0 40px rgba(2, 141, 147,0.8);
       
     }
+    
+    
   
     .right-pane {
-      height: 50%;
+      /* max-height: 280px; */
+      height: auto;
       width: 100vw;
       padding: 10px;
       display: flex;
@@ -190,7 +193,10 @@
     .description {
       font-size: 16px;
     }
-  
+    
+    .right-pane .imgdetails:nth-child(n+2) {
+      display: none;
+    }
     .imgdetails {
       /* width:100vw; */
       width:100vw;
@@ -207,5 +213,15 @@
     .Details .main-content.alternate-layout .right-pane {
         order: unset;
     }
+
+    .button-box {
+      display: flex;
+      gap: 2px;
+      /* overflow-x:auto; */
+      flex-wrap: wrap;
+      justify-content: center;
+      white-space: nowrap;
+  }
+  
   }
   

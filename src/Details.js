@@ -58,7 +58,7 @@ const items = [
   },
   {
     title: "Research Guidance Webinar",
-    description: "In this program we organize a panel discussion on the research domain as a career realm. It will disclose a roadmap to kickstart a journey in R&D as a career stream.Students who are oriented towards core field or they want to research upon some subjects which are in their department courses. In this panel discussion, we preferably invite students who are or have done projects under a professor or will be pursuing higher education for research.",
+    description: "In this program we organize a panel discussion on the research domain as a career realm. It will disclose a roadmap to kickstart a journey in R&D as a career stream. Students who are oriented towards core field or they want to research upon some subjects which are in their department courses. ",
     images: [
       imgrg1,
       imgrg2,

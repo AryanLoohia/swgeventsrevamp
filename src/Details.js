@@ -414,24 +414,6 @@ import './style.css';
 
 const events = [
   {
-    title: "Career Orientation Session",
-    description: "Student Welfare Group conducts the Career Orientation Session for 2nd and 3rd year students to resolve all their doubts regarding different career opportunities based on different profiles like SDE, Data, Finance, Quant, Core, etc. and how to prepare to pursue them.",
-    images: [
-      "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4",
-      "https://images.unsplash.com/photo-1552664730-d307ca884978",
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644"
-    ]
-  },
-  {
-    title: "Research Guidance Webinar",
-    description: "In this program we organize a panel discussion on the research domain as a career realm. It will disclose a roadmap to kickstart a journey in R&D as a career stream. Students who are oriented towards core field or they want to research upon some subjects which are in their department courses.",
-    images: [
-      "https://images.unsplash.com/photo-1588196749597-9ff075ee6b5b",
-      "https://images.unsplash.com/photo-1434030216411-0b793f4b4173",
-      "https://images.unsplash.com/photo-1532619187608-e5375cab36aa"
-    ]
-  },
-  {
         title: "Career Orientation Session",
         description: "Student Welfare Group conducts the Career Orientation Session for 2nd and 3rd year students to resolve all their doubts regarding the different career opportunities based on different profiles like SDE,Data, Finance,Quant, Core, etc. and how to prepare to pursue them",
         images: [

@@ -2,9 +2,9 @@
     width:100vw;
     height:90vh;
     /* height:60vh; */
-    column-count: 3;
+    columns: 3;
     overflow-x:hidden;
-    column-width: 33%;
+    
     position: relative;
     padding:0 12px;
     z-index:0;
@@ -83,3 +83,10 @@
     }
   }
   
+
+  @media (max-width: 768px){
+    .card-container{
+      columns:1;
+      
+    }
+  }

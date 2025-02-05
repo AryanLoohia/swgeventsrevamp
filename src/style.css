@@ -1,0 +1,232 @@
+/* Base styles */
+.app {
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+/* Navigation styles */
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+}
+
+.nav-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-arrow {
+  padding: 0.5rem;
+  color: #9ca3af;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.nav-arrow:hover {
+  color: #0d9488;
+}
+
+.nav-arrow svg {
+  width: 1.5rem;
+  height: 1.5rem;
+  position: relative;
+  top: -11px;
+}
+
+.progress-dots {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0 1rem;
+  scrollbar-width: none;
+}
+
+.progress-dots::-webkit-scrollbar {
+  display: none;
+}
+
+.progress-dot {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 9999px;
+  background-color: #e5e7eb;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.progress-dot.active {
+  width: 2rem;
+  background-color: #0d9488;
+}
+
+.progress-dot:hover:not(.active) {
+  background-color: #99f6e4;
+}
+
+/* Content styles */
+.content {
+  flex: 1;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+  width: 100%;
+}
+
+.event-container {
+  min-height: calc(90vh - 8rem);
+  display: flex;
+  padding-top: 1rem;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.event-info {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.event-text {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.event-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+  color: #0d9488;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #0d9488,rgba(2, 141, 147,0.8));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.event-description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #4b5563;
+}
+
+.event-images {
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.images-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.image-wrapper {
+  position: relative;
+  width: 100%;
+  flex: 1;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.image-wrapper::before {
+  content: '';
+  display: block;
+  padding-top: 75%;
+}
+
+.image-wrapper img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 1024px) {
+  .app {
+    height: 90vh;
+    overflow: hidden;
+  }
+
+  .nav-arrow svg {
+    width: 2rem;
+    position: relative;
+    top: 1px;
+    height: 2rem;
+  }
+
+  .progress-dot.active {
+    width: 3rem;
+  }
+
+  .content {
+    padding: 0 1rem;
+  }
+
+  .event-container {
+    height: calc(90vh - 8rem);
+    flex-direction: row;
+    padding-top: 1rem;
+  }
+
+  .event-container.reverse {
+    flex-direction: row-reverse;
+  }
+
+  .event-title {
+    font-size: 3.75rem;
+  }
+
+  .event-description {
+    font-size: 1.25rem;
+  }
+
+  .images-container {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .image-wrapper {
+    height: 100%;
+  }
+
+  .image-wrapper::before {
+    display: none;
+  }
+}
